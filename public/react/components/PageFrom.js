@@ -68,7 +68,7 @@ const PageForm = ({ handleArticleCreated }) => {
       </div>
 
       <div>
-        <label htmlFor="tags">Tags (comma-separated):</label>
+        <label htmlFor="tags">Tags:</label>
         <input
           type="text"
           id="tags"

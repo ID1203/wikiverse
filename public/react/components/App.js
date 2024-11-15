@@ -46,7 +46,7 @@ export const App = () => {
 
   const handleArticleDelete = async (slug) => {
     try {
-      const response = await fetch(`${apiURL}/wiki${slug}`, {
+      const response = await fetch(`${apiURL}/wiki/${slug}`, {
         method: 'DELETE'
       });
         const data = await response.json();
@@ -79,7 +79,7 @@ export const App = () => {
     <h1>WikiVerse</h1>
     <h2>An interesting 📚</h2>
     {selectedPage ? (
-      <PageDetail page={selectedPage} onBackClick={handleBackToList} />
+      <PageDetail page={selectedPage} handleArticleDelete={handleArticleDelete} onBackClick={handleBackToList} />
     ) : (
       !isAddingArticle && (
         <PagesList pages={pages} onPageClick={handlePageClick} />
