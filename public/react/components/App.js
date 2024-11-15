@@ -50,9 +50,9 @@ export const App = () => {
         method: 'DELETE'
       });
         const data = await response.json();
-        console.log('Article Created:', data);
+        console.log('Article Deleted:', data);
         fetchPages(); 
-        setIsAddingArticle(false); 
+        setSelectedPage(null)
     } catch (err) {
       console.log('Oh no an error! ', err);
     }
